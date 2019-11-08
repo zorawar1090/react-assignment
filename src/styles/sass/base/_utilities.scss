@@ -1,0 +1,26 @@
+.u-center-text {
+  text-align: center !important;
+}
+
+.u-margin-top-medium {
+  margin-top: 4rem !important;
+
+  @include respond(tab-port) {
+    margin-top: 3rem !important;
+  }
+}
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important;
+
+  @include respond(tab-port) {
+    margin-bottom: 3rem !important;
+  }
+}
+
+.u-error {
+  font-size: 2rem;
+  color: red;
+}
+
+

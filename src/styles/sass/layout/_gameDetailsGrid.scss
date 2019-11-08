@@ -1,0 +1,19 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 3rem;
+  background-color: $color-grey;
+  border-radius: 10rem;
+  padding: 5%;
+  margin: 3% 5%;
+}
+
+.box1 {
+  justify-self: end;
+  grid-column: 2/3;
+}
+
+.box2 {
+  justify-self: start;
+  grid-column: 3/4;
+}

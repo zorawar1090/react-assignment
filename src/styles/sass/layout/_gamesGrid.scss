@@ -1,0 +1,64 @@
+.grid-app {
+  margin-top: 10rem;
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: 2rem 1fr 2rem;
+  grid-gap: 2rem 0;
+  align-content:start;
+  background-color: $color-grey;
+  width: 110rem;
+  height: 55rem;
+  @include absCenter;
+  border-radius: 8rem;
+  border: .5rem solid #fff;
+  overflow-y: scroll;
+}
+
+.grid-app > * {
+  grid-column: 2 / -2;
+}
+
+.grid-app > .full {
+  grid-column: 1 / -1;
+}
+
+.hs {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(500, 1fr);
+  grid-template-rows: minmax(15rem, auto);
+  
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-snap-type: x proximity;
+  padding-bottom: calc(.75 * 2rem);
+  margin-bottom: calc(-.25 * 2rem);
+}
+
+.hs > li,
+.item {
+  scroll-snap-align: center;
+  padding: calc(2rem / 2 * 1.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.game-title {
+  text-decoration: none;
+  font-size: 3rem;
+  color: white;
+  text-align: center;
+}
+
+a:hover{
+  transition: all .2s;
+  transform: scale(1.05);
+}
+
+.games-grid-title{
+  margin-bottom: -5rem;
+}

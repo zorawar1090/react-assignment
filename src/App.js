@@ -1,26 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import store from './store'
+import { Provider } from 'react-redux'
+import LoginForm from './components/LoginForm'
+import SignUpForm from './components/SignUpForm'
+import GamesGrid from './components/GamesGrid'
+import GameDetails from './components/GameDetails'
+import Search from './components/Search'
+import { Route } from 'react-router-dom'
+import './styles/sass/main.scss'
+import{Link} from 'react-router-dom'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends React.Component {
+  render() {
+    return <Provider store={store}>
+      <div className="app">
+        <Route path="/" exact component={LoginForm} />
+        <Route path="/search" component={Search} />
+        <Route path="/sign-up" exact component={SignUpForm} />
+        <Route path="/games" exact component={GamesGrid} />
+        <Route path="/game/:name" exact component={GameDetails} />
+      </div>
+    </Provider>
+  }
 }
-
-export default App;

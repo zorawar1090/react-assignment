@@ -1,0 +1,8 @@
+.boxart {
+  border: .5rem solid $color-white;
+}
+
+.boxart:hover{
+  transition: all .2s;
+  transform: scale(1.1);
+}
